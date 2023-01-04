@@ -1,0 +1,19 @@
+:root {
+  --light-color: #ffffff;
+  --dark-color: #000000;
+  --action-color-light: #ad49ad;
+  --action-color-dark: #7e277e;
+  --success-color: #008000;
+  --failure-color: #ff0000;
+  --font-bold: 800;
+  --font-light: 400;
+
+  font-family: 'Montserrat', 'Arial', 'Helvetica';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
