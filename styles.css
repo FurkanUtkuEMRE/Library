@@ -1,3 +1,4 @@
+/* Variables and base settings. */
 :root {
   --light-color: #ffffff;
   --dark-color: #000000;
@@ -5,6 +6,7 @@
   --action-color-dark: #7e277e;
   --success-color: #008000;
   --failure-color: #ff0000;
+  --gradient-color: linear-gradient(var(--action-color-dark), var(--action-color-light));
   --font-bold: 800;
   --font-light: 400;
 
@@ -16,4 +18,153 @@ body {
   padding: 0;
   background-color: var(--dark-color);
   color: var(--light-color);
+}
+
+/* Form styling. */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: var(--gradient-color);
+  border: 1vw solid var(--light-color);
+  border-radius: 1vw;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.library-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.heading {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  color: var(--light-color);
+}
+
+.form-item {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  width: 30%;
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  color: var(--light-color);
+}
+
+.label {
+  flex: 1;
+  flex-flow: column wrap;
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  color: var(--light-color);
+}
+
+.input {
+  flex: 1;
+  flex-flow: column wrap;
+  font-size: 1.5rem;
+  font-weight: var(--font-light);
+  color: var(--dark-color);
+}
+
+.add-book {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  color: var(--action-color-dark);
+  background-color: var(--light-color);
+  padding: 1vw 3vw;
+  margin: 1vw 0;
+  border: none;
+}
+
+.add-book:hover {
+  color: var(--white);
+  background-color: var(--action-color-dark);
+}
+
+/* Library styling. */
+.library-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1vw;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-color);
+  border-image: var(--gradient-color) 30;
+  border-width: 1vw;
+  border-style: solid;
+  border-radius: 1vw;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.book-title {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  color: var(--action-color-dark);
+}
+
+.book-author {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: var(--font-light);
+  color: var(--action-color-light);
+}
+
+.book-pages {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: var(--font-light);
+  color: var(--dark-color);
+}
+
+.book-status {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: var(--font-light);
+  color: var(--dark-color);
+}
+
+.change-status {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  color: var(--light-color);
+  background-color: var(--action-color-dark);
+  padding: 1vw 3vw;
+  margin: 1vw 0;
+  border: none;
+}
+
+.change-status:hover {
+  color: var(--light-color);
+  background-color: var(--action-color-light);
+}
+
+.remove-book {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  color: var(--light-color);
+  background-color: var(--action-color-dark);
+  padding: 1vw 3vw;
+  border: none;
+}
+
+.remove-book:hover {
+  color: var(--light-color);
+  background-color: var(--action-color-light);
 }

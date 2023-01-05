@@ -2,19 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
-    <title>Library</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+  <title>Library</title>
 </head>
 
 <body>
+  <!-- Form where the user adds a new book. -->
+  <div class="form-container">
+    <form class="library-form" action="">
+      <h1 class="heading">Welcome to your personal library!</h1>
 
+      <div class="form-item" id="title-form-item">
+        <label for="title" class="label" id="title-label">Book: </label>
+        <input type="text" class="input" id="title-input" required />
+      </div>
+
+      <div class="form-item" id="author-form-item">
+        <label for="author" class="label" id="author-label">Author: </label>
+        <input type="text" class="input" id="author-input" required />
+      </div>
+
+      <div class="form-item" id="pages-form-item">
+        <label for="pages" class="label" id="pages-label">Pages: </label>
+        <input type="number" class="input" id="pages-input" required />
+      </div>
+
+      <div class="form-item" id="status-form-item">
+        <label for="status" class="label" id="status-label">Status: </label>
+        <select name="status" class="input" id="status-input" required>
+          <option value="Read">Read</option>
+          <option value="Not Read">Not Read</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Add a Book" class="add-book" id="add-book" />
+    </form>
+  </div>
+
+  <!-- Where new books and the current libraries is added. -->
+  <div class="library-container"></div>
 </body>
 
 </html>
