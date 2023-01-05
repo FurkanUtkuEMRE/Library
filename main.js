@@ -88,7 +88,6 @@ function renderBooks() {
 
     removeBook.textContent = 'Remove';
     removeBook.addEventListener('click', removeBookByIndex);
-    console.log(library);
   });
 }
 
